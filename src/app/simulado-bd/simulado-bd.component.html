@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-sm-9">
+            <h2 class="">Simulador de Banco de Dados</h2>
+        </div>
+        <div class="col-sm-3">
+            <button type="button" class="btn btn-primary" routerLink="/inicio">VOLTAR</button>
+        </div>
+    </div>
+<div class="perguntas mt-4">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+        <h6>SIMULADO</h6>
+        <img src="images/paraSimulado.png" alt="">
+    </div>
+<ol>
+    <li class="pergunta question mt-4" *ngFor="let pergunta of perguntasAleatorias">
+        {{ pergunta.texto }}
+        <ul>
+          <li class="answer" *ngFor="let alternativa of pergunta.alternativas; let i = index">
+            <label>
+              <input type="radio" name="pergunta{{ pergunta.id }}" [(ngModel)]="pergunta.selectedOption" [value]="i">
+              {{ alternativa }}
+            </label>
+          </li>
+        </ul>
+      </li>
+</ol>
+</div>
+<ul>
+    <img src="./assets/images/paraSimulado.png" *ngIf="exibirImagem">
+    <li *ngFor="let pergunta of perguntasParaResponderNovamente" class="pergunta question mt-4">
+      {{ pergunta.texto }}
+      <ul>
+        <li class="answer" *ngFor="let alternativa of pergunta.alternativas; let i = index">
+          <label>
+            <input type="radio" name="pergunta{{ pergunta.id }}" [(ngModel)]="pergunta.selectedOption" [value]="i">
+            {{ alternativa }}
+          </label>
+        </li>
+      </ul>
+    </li>
+  </ul>  
+
+<button class="mt-4 btn btn-success col-12 d-flex align-items-center justify-content-center" (click)="verificarRespostas()">FINALIZAR TESTE E VERIFICAR ACERTOS</button>
+
+<div class="row mt-4">
+    <div class="col">
+        <button type="button" class="btn btn-primary" (click)="gerarPerguntas()">Gerar novas perguntas</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-warning" (click)="gerarPerguntas1()">Gerar apenas 1 pergunta</button>
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-dark" disabled (click)="mostrarPerguntasExcluidas()">Perguntas extras</button>
+    </div>
+    <div class="col">
+        <!-- botão para exibir/ocultar as respostas -->
+        <button class="btn btn-info" (click)="alternarRespostas()">Exibir respostas</button>
+    </div>
+</div>
+
+<!-- lista de perguntas e respostas -->
+<ng-container *ngIf="exibirRespostas">
+  <ol>
+    <li *ngFor="let pergunta of perguntas.slice(0,12)">
+      <strong>{{ pergunta.texto }}</strong>
+      <p>Resposta correta: {{ pergunta.resposta === 0 ? 'A' : pergunta.resposta === 1 ? 'B' : pergunta.resposta === 2 ? 'C' : 'D' }}</p>
+    </li>
+  </ol>
+</ng-container>
+</div>
