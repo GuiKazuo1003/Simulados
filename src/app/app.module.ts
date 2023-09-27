@@ -7,12 +7,14 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SimuladoBDComponent } from './simulado-bd/simulado-bd.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { ExtraSimuladoBDComponent } from './extra-simulado-bd/extra-simulado-bd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    SimuladoBDComponent
+    SimuladoBDComponent,
+    ExtraSimuladoBDComponent
   ],
   imports: [
     BrowserModule,

@@ -472,15 +472,6 @@ export class SimuladoBDComponent {
       'GET',
       'DELETE'],
       resposta: 1 // B - 2
-    },
-    {
-      id: 51,
-      texto: 'Qual método HTTP é usado para atualizar um recurso existente no Express.js?',
-      alternativas: ['POST',
-      'PUT',
-      'GET',
-      'DELETE'],
-      resposta: 1 // B - 2
     }
   ];
   
@@ -495,15 +486,12 @@ alternarRespostas(): void {
 
 
   perguntasAleatorias: Pergunta[] = [];
-  perguntasExcluidas: number[] = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 51];
+  perguntasExcluidas: number[] = [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
   perguntasParaResponderNovamente: Pergunta[] = [];
-
-  exibirImagem: boolean = false;
-
 
   mostrarPerguntasExcluidas(): void {
     // Filtrar as perguntas com base nos IDs das perguntas excluídas
-    this.exibirImagem = true;
+
     this.perguntasParaResponderNovamente = this.perguntas.filter((pergunta) =>
       this.perguntasExcluidas.includes(pergunta.id)
     );

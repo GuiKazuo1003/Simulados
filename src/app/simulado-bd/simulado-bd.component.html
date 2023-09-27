@@ -7,10 +7,41 @@
             <button type="button" class="btn btn-primary" routerLink="/inicio">VOLTAR</button>
         </div>
     </div>
+    <h6 class="mt-4">Com base nesse texto responda as perguntas:</h6>
+    <p class="mt-4">Em um mundo cada vez mais digital e interconectado, a gestão eficaz de dados e o
+      desenvolvimento ágil de aplicativos web se tornaram aspectos cruciais para empresas e
+      desenvolvedores. Nesse cenário, duas tecnologias ganharam destaque: NoSQL e Node.js.
+    </p>
+    <p>
+        NoSQL, que significa "Not Only SQL", representa um conjunto de abordagens de
+      armazenamento de dados que difere das tradicionais bases de dados relacionais. As bases
+      de dados NoSQL são projetadas para lidar com volumes massivos de informações, dados
+      não estruturados e cenários de escalabilidade horizontal. Esta tecnologia oferece
+      flexibilidade e desempenho excepcionais, sendo ideal para aplicativos modernos que
+      requerem agilidade e escalabilidade.
+    </p>
+    <p>Por outro lado, Node.js é um ambiente de execução JavaScript do lado do servidor que se
+        tornou extremamente popular na criação de aplicativos web em tempo real, APIs e
+        microserviços. Ele se destaca pela sua natureza orientada a eventos e pela capacidade de
+        construir aplicativos de forma rápida e eficiente usando JavaScript tanto no lado do cliente
+        quanto no lado do servidor. Node.js é uma escolha popular para desenvolvedores que
+        desejam criar aplicativos web de alto desempenho e escaláveis.
+    </p>
+      
+    <p> Neste conjunto de perguntas, exploraremos os conceitos fundamentais por trás do NoSQL e
+          Node.js, bem como suas aplicações práticas. Iremos abordar os principais tipos de bancos
+          de dados NoSQL, como documentos, gráficos, chave-valor e colunas largas, e
+          entenderemos como escolher a melhor opção para diferentes cenários. Além disso,
+          examinaremos o ambiente Node.js, seus principais módulos e como ele pode ser usado
+          para criar servidores web, APIs RESTful e muito mais.
+    </p>
+    <p>À medida que você avança neste conjunto de perguntas, você estará se preparando para
+      compreender as nuances dessas tecnologias, sua relevância no mercado de
+      desenvolvimento e como aplicá-las em projetos reais.</p>
+      
 <div class="perguntas mt-4">
     <div class="col-12 d-flex align-items-center justify-content-center">
         <h6>SIMULADO</h6>
-        <img src="images/paraSimulado.png" alt="">
     </div>
 <ol>
     <li class="pergunta question mt-4" *ngFor="let pergunta of perguntasAleatorias">
@@ -27,7 +58,6 @@
 </ol>
 </div>
 <ul>
-    <img src="./assets/images/paraSimulado.png" *ngIf="exibirImagem">
     <li *ngFor="let pergunta of perguntasParaResponderNovamente" class="pergunta question mt-4">
       {{ pergunta.texto }}
       <ul>
@@ -51,7 +81,7 @@
         <button type="button" class="btn btn-warning" (click)="gerarPerguntas1()">Gerar apenas 1 pergunta</button>
     </div>
     <div class="col">
-        <button type="button" class="btn btn-dark" disabled (click)="mostrarPerguntasExcluidas()">Perguntas extras</button>
+        <button type="button" class="btn btn-dark" routerLink="/extra_simuladoBD">Perguntas extras</button>
     </div>
     <div class="col">
         <!-- botão para exibir/ocultar as respostas -->

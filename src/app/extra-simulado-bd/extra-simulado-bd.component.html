@@ -1,0 +1,36 @@
+<div class="col-sm-3">
+    <button type="button" class="btn btn-primary" routerLink="/simuladoBD">VOLTAR</button>
+</div>
+
+<div class="col-12 d-flex align-items-center justify-content-center">
+    <h6>SIMULADO</h6>
+</div>
+<ol>
+    <h6 class="mt-4">Com base nesse código:</h6>
+    <pre class="mt-4">{{ dados | json }}</pre>
+<li class="pergunta question mt-4" *ngFor="let pergunta of perguntas">
+    {{ pergunta.texto }}
+    <ul>
+      <li class="answer" *ngFor="let alternativa of pergunta.alternativas; let i = index">
+        <label>
+          <input type="radio" name="pergunta{{ pergunta.id }}" [(ngModel)]="pergunta.selectedOption" [value]="i">
+          {{ alternativa }}
+        </label>
+      </li>
+    </ul>
+  </li>
+</ol>
+<div class="col">
+    <!-- botão para exibir/ocultar as respostas -->
+    <button class="btn btn-info" (click)="alternarRespostas()">Exibir respostas</button>
+    <button class="mt-4 btn btn-success col-12 d-flex align-items-center justify-content-center" (click)="verificarRespostas()">FINALIZAR TESTE E VERIFICAR ACERTOS</button>
+
+</div>
+<ng-container *ngIf="exibirRespostas">
+    <ol>
+      <li *ngFor="let pergunta of perguntas.slice(0,15)">
+        <strong>{{ pergunta.texto }}</strong>
+        <p>Resposta correta: {{ pergunta.resposta === 0 ? 'A' : pergunta.resposta === 1 ? 'B' : pergunta.resposta === 2 ? 'C' : 'D' }}</p>
+      </li>
+    </ol>
+  </ng-container>
