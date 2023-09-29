@@ -43,7 +43,7 @@ export class SimuladoBDComponent {
       texto: 'Qual das seguintes afirmações sobre o MongoDB é verdadeira?',
       alternativas: ['Utiliza esquemas rígidos baseados em tabelas.',
       'Armazena dados em tabelas altamente normalizadas.',
-      ' Usa documentos JSON/BSON para armazenar dados.',
+      'Usa documentos JSON/BSON para armazenar dados.',
       'Suporta apenas consultas SQL tradicionais.'],
       resposta: 2 // C - 3
     },
@@ -62,7 +62,7 @@ export class SimuladoBDComponent {
       alternativas: ['Suporte a linguagem SQL padrão.',
       'Esquemas flexíveis e dinâmicos.',
       'Restrição de escalabilidade horizontal.',
-      ' Ausência de suporte a índices.'],
+      'Ausência de suporte a índices.'],
       resposta: 1 // B - 2
     },
     {
@@ -72,10 +72,7 @@ export class SimuladoBDComponent {
       'insertOne',
       'createOne',
       'saveOne'],
-      resposta: 3 // D - 4
-      //resposta: 2 C - 3
-      //resposta: 1 B - 2
-      //resposta 0 A - 1
+      resposta: 1 // B - 2
     },
     {
       id: 7,
@@ -186,132 +183,6 @@ export class SimuladoBDComponent {
       resposta: 0 // A - 1
     },
     {
-      id: 19,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 20,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 21,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 22,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 23,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 24,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 25,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 26,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 27,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 28,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 29,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 30,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 31,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
-      id: 32,
-      texto: 'Qual método é usado para inserir um único documento em uma coleção',
-      alternativas: ['addOne',
-      'insertOne',
-      'createOne',
-      ' saveOne'],
-      resposta: 3 // D - 4
-    },
-    {
       id: 33,
       texto: 'Qual é o objetivo do arquivo "package.json" em um projeto NodeJS?',
       alternativas: ['Armazenar imagens e arquivos estáticos.',
@@ -361,8 +232,8 @@ export class SimuladoBDComponent {
       texto: 'Qual é a principal finalidade do pacote "mongodb" em um aplicativo Node.js?',
       alternativas: ['Gerenciar variáveis de ambiente no MongoDB.',
       'Implementar autenticação de usuário no MongoDB.',
-      ' Facilitar a conexão e interação com um banco de dados MongoDB.',
-      ' Realizar validações de entrada de dados no MongoDB.'],
+      'Facilitar a conexão e interação com um banco de dados MongoDB.',
+      'Realizar validações de entrada de dados no MongoDB.'],
       resposta: 2 // C - 3
     },
     {
@@ -416,7 +287,7 @@ export class SimuladoBDComponent {
       alternativas: ['Inicializa um novo projeto.',
       'Instala o Node.js no sistema.',
       'Instala as dependências do projeto listadas no arquivo "package.json".',
-      ' Remove todas as dependências do projeto.'],
+      'Remove todas as dependências do projeto.'],
       resposta: 2 // C - 3
     },
     {
@@ -482,6 +353,12 @@ export class SimuladoBDComponent {
 // método que exibe ou oculta as respostas
 alternarRespostas(): void {
   this.exibirRespostas = !this.exibirRespostas;
+
+  if (this.exibirRespostas) {
+    this.perguntasExibidas.forEach(pergunta => {
+      console.log(`Pergunta: ${pergunta.texto}, Resposta: ${pergunta.resposta}`);
+    });
+  }
 }
 
 
@@ -501,20 +378,21 @@ alternarRespostas(): void {
   ngOnInit(): void {
     this.perguntasAleatorias = this.perguntas.sort(() => 0.5 - Math.random()).slice(0, 12);
   }
-  gerarPerguntas(): void {
-      // Filtrar perguntas excluídas antes do sorteio aleatório
-    const perguntasDisponiveis = this.perguntas.filter((pergunta) => !this.perguntasExcluidas.includes(pergunta.id));
 
+  perguntasExibidas: any[] = []; // Inicialmente vazio, pois nenhuma pergunta está sendo exibida
+  /*
+  gerarPerguntas(): void {
       // Verifique se há perguntas suficientes disponíveis
-    if (perguntasDisponiveis.length >= 12) {
-      this.perguntasAleatorias = perguntasDisponiveis.sort(() => 0.5 - Math.random()).slice(0, 12);
+    if (this.perguntasAleatorias.length >= 12) {
+      this.perguntasExibidas = this.perguntasAleatorias.sort(() => 0.5 - Math.random()).slice(0, 12);
     } else {
       // Não há perguntas suficientes após a exclusão, você pode lidar com isso de acordo com sua lógica
       console.log('Não há perguntas suficientes disponíveis após a exclusão.');
     }
-  }
+    this.exibirRespostas = false;
+  }*/
   gerarPerguntas1(): void {
-    this.perguntasAleatorias = this.perguntas.sort(() => 0.5 - Math.random()).slice(0, 1);
+    this.perguntasAleatorias = this.perguntas.sort(() => 0.5 - Math.random()).slice(0, 12);
   }
   verificarRespostas(): void {
     let acertos = 0;

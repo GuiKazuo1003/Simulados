@@ -74,18 +74,20 @@
 <button class="mt-4 btn btn-success col-12 d-flex align-items-center justify-content-center" (click)="verificarRespostas()">FINALIZAR TESTE E VERIFICAR ACERTOS</button>
 
 <div class="row mt-4">
-    <div class="col">
+    <!--
+      <div class="col">
         <button type="button" class="btn btn-primary" (click)="gerarPerguntas()">Gerar novas perguntas</button>
     </div>
+    -->
     <div class="col">
-        <button type="button" class="btn btn-warning" (click)="gerarPerguntas1()">Gerar apenas 1 pergunta</button>
+        <button type="button" class="btn btn-primary" (click)="gerarPerguntas1()">Gerar novas Perguntas</button>
     </div>
     <div class="col">
         <button type="button" class="btn btn-dark" routerLink="/extra_simuladoBD">Perguntas extras</button>
     </div>
     <div class="col">
         <!-- botão para exibir/ocultar as respostas -->
-        <button class="btn btn-info" (click)="alternarRespostas()">Exibir respostas</button>
+        <button class="btn btn-warning" (click)="alternarRespostas()">Exibir respostas</button>
     </div>
 </div>
 
@@ -98,4 +100,13 @@
     </li>
   </ol>
 </ng-container>
+<div class="col-12 d-flex align-items-center justify-content-center mt-4">
+  <div class="row">
+    <h3 class="mt-4">Detalhes</h3>
+    <p>Clicando para gerar novas perguntas, já exibindo as respostas... É automaticamente atualizado<br>
+      Recomenda-se clicar novamente no botão de exibir para que oculte novamente as respostas
+    </p>
+  </div>
+  
+</div>
 </div>
