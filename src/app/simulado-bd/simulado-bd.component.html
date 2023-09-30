@@ -94,7 +94,7 @@
 <!-- lista de perguntas e respostas -->
 <ng-container *ngIf="exibirRespostas">
   <ol>
-    <li *ngFor="let pergunta of perguntas.slice(0, 15)">
+    <li *ngFor="let pergunta of perguntas.slice(0, 12)">
       <strong class="mt-4">{{ pergunta.texto }}</strong>
       <p>
         <strong class="mt-4">Sua resposta:</strong> {{ getAlternativaEscolhida(pergunta) }}
