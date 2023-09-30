@@ -404,5 +404,9 @@ alternarRespostas(): void {
     alert(`Você acertou ${acertos} de ${this.perguntasAleatorias.length} perguntas.`);
   }
 
+  getAlternativaEscolhida(pergunta: any): string {
+    return pergunta.alternativas[pergunta.selectedOption];
+  }
+
 }
 

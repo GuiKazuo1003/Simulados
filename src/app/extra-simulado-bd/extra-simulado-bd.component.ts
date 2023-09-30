@@ -37,7 +37,7 @@ export class ExtraSimuladoBDComponent {
         id: 3,
         texto: 'Qual comando retornaria apenas os 2 primeiros produtos na coleção?',
         alternativas: ['db.produtos.find().first(2)',
-        'db.produtos.find().first(2)',
+        ' db.produtos.find().get(2)',
         'db.produtos.find().top(2)',
         'db.produtos.find().limit(2)'],
         resposta: 3 // D - 4
@@ -91,7 +91,7 @@ export class ExtraSimuladoBDComponent {
         id: 9,
         texto: 'Quais produtos pertencem à categoria "Calçados" e têm preço maior que 50, ordenados por nome em ordem alfabética?',
         alternativas: [' db.produtos.find({ categoria: "Calçados", preco: { $gt: 50 } }).sort({ nome: 1})',
-        'db.produtos.find({ categoria: "Calçados", preco: { $gt: 50 } }).sort({ nome: 1})',
+        ' db.produtos.find({ categoria: "Calçados", preco: { $gt: 50 } }).sort({ nome: -1})',
         'db.produtos.find({ categoria: "Calçados", preco: { $gte: 50 } }).sort({ nome: 1})',
         'db.produtos.find({ categoria: "Calçados", preco: { $gte: 50 } }).sort({ nome: -1})'],
         resposta: 0 // A - 1
@@ -201,4 +201,8 @@ export class ExtraSimuladoBDComponent {
       }
       alert(`Você acertou ${acertos} de ${this.perguntas.length} perguntas.`);
     }
+    getAlternativaEscolhida(pergunta: any): string {
+      return pergunta.alternativas[pergunta.selectedOption];
+    }
+    
 }

@@ -27,10 +27,18 @@
 
 </div>
 <ng-container *ngIf="exibirRespostas">
-    <ol>
-      <li *ngFor="let pergunta of perguntas.slice(0,15)">
-        <strong>{{ pergunta.texto }}</strong>
-        <p>Resposta correta: {{ pergunta.resposta === 0 ? 'A' : pergunta.resposta === 1 ? 'B' : pergunta.resposta === 2 ? 'C' : 'D' }}</p>
-      </li>
-    </ol>
-  </ng-container>
+  <ol>
+    <li *ngFor="let pergunta of perguntas.slice(0, 15)">
+      <strong>{{ pergunta.texto }}</strong>
+      <p>
+        <strong>Sua resposta:</strong> {{ getAlternativaEscolhida(pergunta) }}
+        ({{ pergunta.selectedOption === pergunta.resposta ? 'Correta' : 'Incorreta' }})
+      </p>
+      <p>
+        <strong>Resposta correta:</strong> {{ pergunta.alternativas[pergunta.resposta] }}
+      </p>
+    </li>
+  </ol>
+</ng-container>
+
+
